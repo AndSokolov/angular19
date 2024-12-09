@@ -1,0 +1,33 @@
+<div class="table-container mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="created_at">
+      <th *matHeaderCellDef mat-header-cell>Date</th>
+      <td *matCellDef="let element" class="date" mat-cell>{{ element.created_at | date: 'dd-MM-YYYY HH:mm' }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="status">
+      <th *matHeaderCellDef mat-header-cell>Status</th>
+      <td *matCellDef="let element" mat-cell>
+        <div class="status">{{ element?.status }}</div>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="key">
+      <th *matHeaderCellDef mat-header-cell>Key</th>
+      <td *matCellDef="let element" class="key" mat-cell>{{ element.key }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th *matHeaderCellDef mat-header-cell>Actions</th>
+      <td *matCellDef="let element" class="actions" mat-cell>
+        <div class="actions-container">
+          <button mat-button>Bun</button>
+          <button mat-button>Unban</button>
+        </div>
+      </td>
+    </ng-container>
+
+    <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+    <tr *matRowDef="let row; columns: displayedColumns;" class="row" mat-row></tr>
+  </table>
+</div>

@@ -1,0 +1,15 @@
+.filters {
+  position: absolute;
+  right: 0;
+  width: 320px;
+  padding: 20px;
+  z-index: 99;
+  background-color: white;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+  }
+}

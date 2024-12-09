@@ -1,0 +1,14 @@
+.container {
+  padding: 50px;
+
+  button {
+    display: flex;
+    justify-self: flex-end;
+    margin-bottom: 10px;
+  }
+
+  .filters {
+    position: relative;
+  }
+}
+
